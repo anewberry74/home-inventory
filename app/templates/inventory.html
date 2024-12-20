@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Network Inventory</title>
+    <a href="/docs" target="_blank">API</a>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://unpkg.com/htmx.org@2.0.4" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body>
+    <div class="mx-4">
+
+        <p class="text-2xl font-bold mb-4">Home Network Inventory</p>
+        
+            <table class="min-w-[50%] mb-4">
+                <thead class="border-b text-lg">
+                    <tr>
+                      <th class="border">Name</th>
+                      <th class="border">IP Address</th>
+                      <th class="border">Device Type</th>
+                      <th class="border">Role</th>
+                      <th class="border">OS/Firmware</th>
+                      <th class="border">Specs</th>
+                      <th class="border">Notes</th>
+                      <th class="border">ID</th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-center text-sm" id="table-body">
+                      {% include 'table.html' %}
+                  </tbody>
+            </table>
+        
+        <div class="flex justify-between">
+            <a hx-get="/inventory/add" hx-swap="outerHTML swap:.5s" class="fade-me-out">
+                <i class="fas fa-plus-circle"></i> Add Inventory</a>
+        
+    </div>
+</body>
+</html>
