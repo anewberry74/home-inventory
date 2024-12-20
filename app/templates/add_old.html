@@ -1,0 +1,24 @@
+<div id="swapable-content"></div>
+<form id="library-form" class="library-form fade-me-in fade-me-out" hx-swap="outerHTML" hx-target="#swapable-content" action="/inventory/add" method="POST">
+
+    <input type="text" class="form-control" name="Name" placeholder="Device Name" required/>
+    <input type="text" class="form-control" name="IP Address" placeholder="Device IP" required/><br>
+    <input type="text" class="form-control" name="Device Type" placeholder="Server, Router, Vitual, Desktop" required/><br>
+    <input type="text" class="form-control" name="Role" placeholder="Edge Router, Kids PC, Virtualiztion" required/><br>
+    <input type="text" class="form-control" name="OS/Firmware" placeholder="Device Current OS or Firmware" required/><br>
+    <input type="text" class="form-control" name="Specs" placeholder="Hardware Specification" required/><br>
+    <input type="text" class="form-control" name="Notes" placeholder="256 Character Note" required/><br>
+    
+
+    <br>
+    <button  type="submit">Create</button>
+
+    <button
+            hx-get="/books/cancel_add"
+            hx-target="#library-form"
+    >Cancel</button>
+
+</form>
+
+<button type="submit">Add Inventory</button>
+<button type="button" onclick="window.location.href='/inventory';">Cancel</button>
