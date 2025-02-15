@@ -1,0 +1,4 @@
+# START CRON JOB
+#* * * * * /usr/local/bin/python /app/util/ping_by_id.py > /proc/1/fd/1 2>/proc/1/fd/2
+* * * * * /usr/local/bin/python /app/util/ping_by_id.py 2>&1
+# END CRON JOB

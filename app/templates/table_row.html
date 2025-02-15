@@ -1,0 +1,25 @@
+<form id="new-inventory-form" hx-post="/inventory/add" hx-target="#table-body" hx-swap="afterend" >
+<tr>
+        <td><input type="text" name="name" class="border" placeholder="Name" required></td>
+        <td><input type="text" name="ip" class="border" placeholder="IP Address" required></td>
+        <td><input type="text" name="device_type" class="border" placeholder="Device Type"></td>
+        <td><input type="text" name="role" class="border" placeholder="Role"></td>
+        <td><input type="text" name="os_firmware" class="border" placeholder="OS/Firmware"></td>
+        <td><input type="text" name="specs" class="border" placeholder="Specs"></td>
+        <td><input type="text" name="notes" class="border" placeholder="Notes"></td>
+        <td></td>
+        <td>
+            <button class="btn" type="submit" data-bs-toggle="tooltip" title="Save changes">
+                <i class="fa fa-check-circle" style="font-size:24px;color:green"></i>
+            </button>
+            <button class="btn" type="button" onclick="this.closest('form').remove();" data-bs-toggle="tooltip" title="Cancel">
+                <i class="fa fa-times-circle" style="font-size:24px;color:red"></i>
+            </button>
+        </td>
+    </form>
+</tr>
+<script>
+    document.getElementById('new-inventory-form').addEventListener('htmx:responseError', function(event) {
+        alert(event.detail.xhr.responseText);
+    });
+</script>

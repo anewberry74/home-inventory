@@ -1,0 +1,46 @@
+tr.htmx-swapping td {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+.right-align {
+    text-align: right;
+}
+.add-inventory-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title-container .title {
+    margin-right: 1rem;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.btn-custom {
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+.btn-margin {
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+.btn-api {
+    background-color: #ff5733; /* Custom color for the API button */
+    border-color: #ff5733;
+    color: white;
+}
+.btn-api:hover {
+    background-color: #e04e2a; /* Darker shade for hover effect */
+    border-color: #e04e2a;
+}
+.right-align-row {
+    text-align: right;
+}
