@@ -1,1 +1,0 @@
-device type, name, role, Specs, IP, OS/Firmware, Notes
